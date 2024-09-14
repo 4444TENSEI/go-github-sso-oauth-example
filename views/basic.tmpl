@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+
+<head>
+
+</head>
+
+<body>
+	<p>你好，{{.User.Login}}</p>
+	<p>
+		{{if not .User.Email}}
+      看起来你没有公开的电子邮件地址。这很酷。
+		{{else}}
+			看起来你的公开电子邮件地址是 {{.User.Email}}。
+		{{end}}
+	</p>
+	<p>
+		{{if not .Emails}}
+      另外，你对你的私人电子邮件地址保密得很好。
+		{{else}}
+			在你的允许下，我们还找到了你的私人电子邮件地址：
+			{{range .Emails}}
+        <p>{{.Email}} (已验证: {{.Verified}})</p>
+			{{end}}
+		{{end}}
+	</p>
+</body>
+
+</html>

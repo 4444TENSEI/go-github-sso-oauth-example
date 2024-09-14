@@ -1,0 +1,5 @@
+# 应用回调地址请设置为http://localhost:4567/callback
+
+Port = "4567"
+GH_BASIC_CLIENT_ID = "xxxxxxxxxx"
+GH_BASIC_SECRET_ID = "xxxxxxxxxxxxxxxxxxxxxx"
